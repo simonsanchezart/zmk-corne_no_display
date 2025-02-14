@@ -19,6 +19,22 @@
 };
 
 / {
+    macros {
+        gaming_on: gaming {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 4 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(277,43,47)>;
+            label = "GAMING";
+        };
+
+        gaming_off: gaming_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &rgb_ug RGB_COLOR_HSB(37,70,54)>;
+            label = "GAMING_OFF";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -32,10 +48,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE      &kp Q  &kp W  &kp E         &kp R        &kp T          &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F        &kp G          &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X  &kp C         &kp V        &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DELETE
-                              &kp LEFT_ALT  &lt 1 SPACE  &lt 3 SPACE    &lt 3 ENTER  &lt 2 RET  &kp RALT
+&kp ESCAPE      &kp Q  &kp W  &kp E         &kp R        &kp T          &kp Y        &kp U      &kp I       &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F        &kp G          &kp H        &kp J      &kp K       &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X  &kp C         &kp V        &kp B          &kp N        &kp M      &kp COMMA   &kp DOT  &kp FSLH  &kp DELETE
+                              &kp LEFT_ALT  &lt 1 SPACE  &lt 3 SPACE    &lt 3 ENTER  &lt 2 RET  &gaming_on
             >;
         };
 
@@ -49,10 +65,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp N1           &kp N2          &kp N3  &kp N4  &kp N5          &kp N6          &kp N7          &kp N8     &kp N9  &kp N0    &kp BSPC
-&trans   &trans           &trans          &trans  &trans  &bt BT_SEL 3    &trans          &kp UP_ARROW    &trans     &trans  &kp HOME  &kp PG_UP
-&trans   &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans  &trans  &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &kp END   &kp PG_DN
-                                          &trans  &trans  &trans          &kp INS         &kp DEL         &trans
+&kp TAB  &kp N1           &kp N2          &kp N3  &kp N4  &kp N5    &kp N6          &kp N7          &kp N8     &kp N9  &kp N0    &kp BSPC
+&trans   &none            &none           &none   &none   &none     &none           &kp UP_ARROW    &none      &none   &kp HOME  &kp PG_UP
+&trans   &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &none   &none   &none     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none   &kp END   &kp PG_DN
+                                          &trans  &trans  &trans    &kp INS         &kp DEL         &trans
             >;
         };
 
@@ -80,6 +96,15 @@
 &trans  &trans        &trans        &trans        &sys_reset    &bootloader     &trans          &kp UP_ARROW  &trans     &trans  &trans   &kp F12
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans   &bt BT_CLR_ALL
                                     &trans        &trans        &trans          &trans          &trans        &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp E     &kp R        &kp T        &kp Y        &kp U        &kp I        &kp O    &kp P     &kp BSPC
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F        &kp G        &kp H        &kp J        &kp K        &kp L    &kp SEMI  &kp APOS
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V        &kp B        &kp N        &kp M        &kp COMMA    &kp DOT  &kp FSLH  &kp RSHFT
+                         &kp LALT  &lt 1 SPACE  &kp SPACE    &lt 1 ENTER  &lt 1 ENTER  &gaming_off
             >;
         };
     };
