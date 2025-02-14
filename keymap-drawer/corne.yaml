@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   QWERTY:
-  - '&esc_tab'
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&td0'
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -39,12 +39,12 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-space$$', h: NUMBER}
-  - {t: LEFT WIN, h: Fn}
+  - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
   - $$mdi:apple-keyboard-option$$
   NUMBER:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-tab$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -71,7 +71,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB OFF
   - RGB ON
-  - RGB COLOR HSB(28,85,62)
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-left-bold$$
@@ -99,7 +99,7 @@ layers:
   - (
   - )
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -123,7 +123,7 @@ layers:
   - '}'
   - '|'
   - '~'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - LEFT WIN
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -156,16 +156,16 @@ layers:
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - BT CLR ALL
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
