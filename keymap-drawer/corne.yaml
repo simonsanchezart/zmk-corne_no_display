@@ -42,7 +42,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
-  - '&gaming_on'
+  - {t: '$$mdi:minus-circle-outline$$', h: '&gaming_on'}
   gaming:
   - $$mdi:keyboard-esc$$
   - Q
@@ -85,7 +85,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - '&gaming_off'
+  - {t: '$$mdi:minus-circle-outline$$', h: '&gaming_off'}
   NUMBER:
   - $$mdi:keyboard-tab$$
   - {t: '1', s: '!'}
@@ -103,26 +103,26 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '|'
-  - {t: \, s: '|'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - HOME
+  - PgUp
+  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - HOME
-  - PG UP
+  - {t: \, s: '|'}
+  - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB OFF
   - RGB ON
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '{'
-  - '}'
   - END
-  - PG DN
+  - PgDn
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: /, s: '?'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -152,7 +152,7 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: \, s: '|'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - OUT USB
@@ -164,12 +164,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '|'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '~'
   - LEFT WIN
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
@@ -218,3 +218,4 @@ layers:
 combos:
 - p: [0, 36]
   k: Alt+$$mdi:keyboard-tab$$
+  l: [QWERTY]
