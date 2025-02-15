@@ -55,11 +55,32 @@
             tapping-term-ms = <500>;
         };
 
-        new_behavior: new_behavior {
+        bt0tap: bt0tap {
             compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
+            label = "BT0TAP";
             #binding-cells = <0>;
-            bindings = <&none>, <&none>, <&bt BT_SEL 0>;
+            bindings = <&none>, <&bt BT_SEL 0>;
+        };
+
+        bt1tap: bt1tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BT1TAP";
+            #binding-cells = <0>;
+            bindings = <&none>, <&bt BT_SEL 1>;
+        };
+
+        bt2tap: bt2tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BT2TAP";
+            #binding-cells = <0>;
+            bindings = <&none>, <&bt BT_SEL 2>;
+        };
+
+        btcleartap: btcleartap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BTCLEARTAP";
+            #binding-cells = <0>;
+            bindings = <&none>, <&bt BT_CLR_ALL>;
         };
     };
 
@@ -129,10 +150,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1         &kp F2  &kp F3  &kp F4      &kp F5         &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans  &trans         &trans  &trans  &sys_reset  &bootloader    &trans  &trans  &trans  &trans  &trans   &kp F12
-&trans  &new_behavior  &none   &none   &none       &none          &trans  &trans  &trans  &trans  &trans   &none
-                               &trans  &trans      &trans         &trans  &trans  &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4      &kp F5         &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans  &trans   &trans   &trans   &sys_reset  &bootloader    &trans  &trans  &trans  &trans  &trans   &kp F12
+&trans  &bt0tap  &bt1tap  &bt2tap  &none       &none          &trans  &trans  &trans  &trans  &trans   &btcleartap
+                          &trans   &trans      &trans         &trans  &trans  &trans
             >;
         };
     };
