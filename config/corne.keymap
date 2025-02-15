@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -50,33 +49,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLDGAMINGOFF";
             bindings = <&gaming_off>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <500>;
-        };
-
-        hold_bt: hold_bt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_BT";
-            bindings = <&bt>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <500>;
-        };
-
-        hold_reset: hold_reset {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_RESET";
-            bindings = <&sys_reset>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <500>;
-        };
-
-        hold_bootloader: hold_bootloader {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_BOOTLOADER";
-            bindings = <&bootloader>, <&none>;
 
             #binding-cells = <2>;
             tapping-term-ms = <500>;
@@ -149,10 +121,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1               &kp F2               &kp F3               &kp F4               &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans  &trans               &trans               &trans               &hold_reset 0 0      &hold_bootloader 0 0    &trans  &trans  &trans  &trans  &trans   &kp F12
-&trans  &hold_bt BT_SEL 0 0  &hold_bt BT_SEL 0 1  &hold_bt BT_SEL 0 2  &hold_bt BT_SEL 0 3  &hold_bt BT_SEL 0 4     &trans  &trans  &trans  &trans  &trans   &hold_bt BT_CLR_ALL 0
-                                                  &trans               &trans               &trans                  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans  &trans  &trans  &trans  &none   &none     &trans  &trans  &trans  &trans  &trans   &kp F12
+&trans  &none   &none   &none   &none   &none     &trans  &trans  &trans  &trans  &trans   &none
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
