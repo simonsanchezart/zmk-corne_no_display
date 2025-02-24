@@ -123,10 +123,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp N1           &kp N2          &kp N3  &kp N4    &kp N5           &kp N6     &kp N7     &kp N8            &kp N9             &kp N0         &kp BSPC
-&trans   &kp CAPS         &kp LEFT_ALT    &none   &kp HOME  &kp PAGE_UP      &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp GRAVE
-&trans   &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &none   &kp END   &kp PAGE_DOWN    &none      &none      &trans            &trans             &kp SLASH      &trans
-                                          &trans  &trans    &trans           &trans     &trans     &trans
+&kp TAB  &kp N1           &kp N2          &kp N3  &kp N4    &kp N5           &kp N6      &kp N7            &kp N8            &kp N9             &kp N0         &kp BSPC
+&trans   &kp CAPS         &kp LEFT_ALT    &none   &kp HOME  &kp PAGE_UP      &kp MINUS   &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp GRAVE
+&trans   &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &none   &kp END   &kp PAGE_DOWN    &kp K_MUTE  &kp K_PLAY_PAUSE  &kp K_PREVIOUS    &kp K_NEXT         &kp SLASH      &trans
+                                          &trans  &trans    &trans           &trans      &trans            &trans
             >;
         };
 
@@ -140,10 +140,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &none  &none  &none         &none   &none     &none   &none     &kp UP_ARROW  &none      &none  &kp BSPC
-&trans  &none  &none  &none         &none   &none     &none   &kp LEFT  &kp DOWN      &kp RIGHT  &none  &kp GRAVE
-&trans  &none  &none  &none         &none   &none     &none   &none     &none         &none      &none  &kp TILDE
-                      &kp LEFT_WIN  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans    &kp UP_ARROW  &trans     &trans  &kp BSPC
+&trans  &trans  &trans  &trans        &trans  &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &kp GRAVE
+&trans  &trans  &trans  &trans        &trans  &trans    &trans  &trans    &trans        &trans     &trans  &kp TILDE
+                        &kp LEFT_WIN  &trans  &trans    &trans  &trans    &trans
             >;
         };
 
