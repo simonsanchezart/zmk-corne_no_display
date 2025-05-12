@@ -100,11 +100,11 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - HOME
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PgUp
+  - PgDn
   - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '[', s: '{'}
@@ -115,12 +115,12 @@ layers:
   - RGB OFF
   - RGB ON
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - HOME
   - END
-  - PgDn
-  - MUTE
+  - $$mdi:volume-off$$
   - PLAY PAUSE
   - PREVIOUS
-  - NEXT
+  - $$mdi:skip-next$$
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
