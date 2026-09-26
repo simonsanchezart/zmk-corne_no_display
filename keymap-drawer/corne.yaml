@@ -26,9 +26,9 @@ layers:
   - {t: ;, s: ':'}
   - OUT USB
   - OUT USB
-  - Z
-  - X
-  - C
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - '&btcleartap'
+  - '&bt1tap'
   - V
   - B
   - N
