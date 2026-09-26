@@ -24,8 +24,8 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
+  - OUT USB
+  - OUT USB
   - Z
   - X
   - C
