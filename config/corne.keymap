@@ -84,13 +84,11 @@
             bindings = <&none>, <&bt BT_CLR_ALL>;
         };
 
-        holdTapKey: holdTapKey {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLDTAPKEY";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            tapping-term-ms = <50>;
+        shiftEsc: shiftEsc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFTESC";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp ESCAPE>;
         };
     };
 
@@ -107,10 +105,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE                     &kp Q  &kp W  &kp E         &kp R        &kp T        &kp Y        &kp U      &kp I              &kp O    &kp P     &kp BSPC
-&holdTapKey LEFT_SHIFT ESCAPE  &kp A  &kp S  &kp D         &kp F        &kp G        &kp H        &kp J      &kp K              &kp L    &kp SEMI  &kp SQT
-&kp LCTRL                      &kp Z  &kp X  &kp C         &kp V        &kp B        &kp N        &kp M      &kp COMMA          &kp DOT  &kp FSLH  &kp DELETE
-                                             &kp LEFT_ALT  &lt 2 SPACE  &kp SPACE    &lt 4 ENTER  &lt 3 RET  &holdgamingon 0 0
+&kp ESCAPE  &kp Q  &kp W  &kp E         &kp R        &kp T        &kp Y        &kp U      &kp I              &kp O    &kp P     &kp BSPC
+&shiftEsc   &kp A  &kp S  &kp D         &kp F        &kp G        &kp H        &kp J      &kp K              &kp L    &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z  &kp X  &kp C         &kp V        &kp B        &kp N        &kp M      &kp COMMA          &kp DOT  &kp FSLH  &kp DELETE
+                          &kp LEFT_ALT  &lt 2 SPACE  &kp SPACE    &lt 4 ENTER  &lt 3 RET  &holdgamingon 0 0
             >;
         };
 
